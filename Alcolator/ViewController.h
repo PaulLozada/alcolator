@@ -14,7 +14,7 @@
 @property (weak,nonatomic) UISlider                 *beerCountSlider;
 @property (weak,nonatomic) UILabel                  *resultLabel;
 
-- (void)sliderValueDidChange:(UISlider *)sender;
+-(void)sliderValueDidChange:(UISlider *)sender;
 -(void)buttonPressed:(UIButton *)sender;
 
 @end

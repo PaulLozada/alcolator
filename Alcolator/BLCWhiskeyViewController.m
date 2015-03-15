@@ -26,7 +26,7 @@
     self.title = NSLocalizedString(@"Whiskey", @"whiskey");
 }
 
-- (void)buttonPressed:(UIButton *)sender {
+-(void)buttonPressed:(UIButton *)sender {
     
     [self.beerPercentTextField resignFirstResponder];
     
@@ -55,12 +55,12 @@
     NSString *whiskeyText;
     
     if (numberOfWhiskeyGlassesForEquivalentAlcoholAmount == 1) {
-        whiskeyText = NSLocalizedString(@"glass", @"singular glass");
+        whiskeyText = NSLocalizedString(@"shot", @"singular shot");
     } else {
-        whiskeyText = NSLocalizedString(@"glasses", @"plural of glass");
+        whiskeyText = NSLocalizedString(@"shots", @"plural of shots");
     }
     
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ wine.",nil),numberOfBeers,beerText,numberOfWhiskeyGlassesForEquivalentAlcoholAmount,whiskeyText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ whiskey.",nil),numberOfBeers,beerText,numberOfWhiskeyGlassesForEquivalentAlcoholAmount,whiskeyText];
     
     self.resultLabel.text = resultText;
     

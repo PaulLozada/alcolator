@@ -104,7 +104,7 @@
     self.resultLabel.font               = [UIFont fontWithName:@"Gill Sans" size:30];
     self.resultLabel.numberOfLines      = 0;
     
-    self.title = NSLocalizedString(@"Wine", @"Wine");
+   // self.title = NSLocalizedString(@"Wine", @"Wine");
     
 }
 
