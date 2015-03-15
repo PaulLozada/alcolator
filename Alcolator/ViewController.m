@@ -104,6 +104,7 @@
     self.resultLabel.font               = [UIFont fontWithName:@"Gill Sans" size:30];
     self.resultLabel.numberOfLines      = 0;
     
+    self.title = NSLocalizedString(@"Wine", @"Wine");
     
 }
 
@@ -111,7 +112,7 @@
     [super viewWillLayoutSubviews];
 
     CGFloat viewWidth       = [[UIScreen mainScreen]bounds].size.width ;
-    CGFloat padding         = 20;
+    CGFloat padding         = 70;
     CGFloat itemWidth       = viewWidth - padding - padding;
     CGFloat itemHeight      = 44;
     
@@ -145,6 +146,14 @@
     
     NSLog(@"Slider value changed to %f",sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    
+
+    if (sender.value == 1) {
+        
+        self.title = [NSString stringWithFormat:@"%.0f glass of wine",sender.value];
+    } else{
+        self.title = [NSString stringWithFormat:@"%.0f glasses of wine",sender.value];
+    }
     
     
 }

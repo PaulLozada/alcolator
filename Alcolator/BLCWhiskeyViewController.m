@@ -14,20 +14,32 @@
 
 @implementation BLCWhiskeyViewController
 
+-(void)sliderValueDidChange:(UISlider *)sender{
+    
+    self.title = [NSString stringWithFormat:@"%0.f Whiskey shot ",self.beerCountSlider.value];
+}
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+
+    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+}
+
 - (void)buttonPressed:(UIButton *)sender {
     
     [self.beerPercentTextField resignFirstResponder];
     
     
     int numberOfBeers = self.beerCountSlider.value;
-    int ouncesInOneBeerGlass = 12;
+    int ouncesInOneBeerGlass = 12; // assume they are 12oz beer bottles
     
     float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
     float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
     float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
     
-    float ouncesInOneWhiskeyGlass = 1;
-    float alcoholPercentageOfWhiskey = 0.4;
+    float ouncesInOneWhiskeyGlass = 1; // 1oz shot
+    float alcoholPercentageOfWhiskey = 0.4; // 40% is average
     
     float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
     float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;

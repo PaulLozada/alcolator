@@ -14,6 +14,7 @@
 		3316C3361AB50FAB00FD3625 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3316C3341AB50FAB00FD3625 /* LaunchScreen.xib */; };
 		3316C3421AB50FAB00FD3625 /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3316C3411AB50FAB00FD3625 /* AlcolatorTests.m */; };
 		3316C34D1AB51D4900FD3625 /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3316C34C1AB51D4900FD3625 /* BLCWhiskeyViewController.m */; };
+		3316C3501AB5333800FD3625 /* BLCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3316C34F1AB5333800FD3625 /* BLCMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		3316C3411AB50FAB00FD3625 /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
 		3316C34B1AB51D4900FD3625 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWhiskeyViewController.h; sourceTree = "<group>"; };
 		3316C34C1AB51D4900FD3625 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWhiskeyViewController.m; sourceTree = "<group>"; };
+		3316C34E1AB5333800FD3625 /* BLCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCMainViewController.h; path = ../BLCMainViewController.h; sourceTree = "<group>"; };
+		3316C34F1AB5333800FD3625 /* BLCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCMainViewController.m; path = ../BLCMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		3316C3241AB50FAB00FD3625 /* Alcolator */ = {
 			isa = PBXGroup;
 			children = (
+				3316C34E1AB5333800FD3625 /* BLCMainViewController.h */,
+				3316C34F1AB5333800FD3625 /* BLCMainViewController.m */,
 				3316C3291AB50FAB00FD3625 /* AppDelegate.h */,
 				3316C32A1AB50FAB00FD3625 /* AppDelegate.m */,
 				3316C32C1AB50FAB00FD3625 /* ViewController.h */,
@@ -223,6 +228,7 @@
 				3316C32E1AB50FAB00FD3625 /* ViewController.m in Sources */,
 				3316C34D1AB51D4900FD3625 /* BLCWhiskeyViewController.m in Sources */,
 				3316C32B1AB50FAB00FD3625 /* AppDelegate.m in Sources */,
+				3316C3501AB5333800FD3625 /* BLCMainViewController.m in Sources */,
 				3316C3281AB50FAB00FD3625 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +420,7 @@
 				3316C3471AB50FAB00FD3625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3316C3481AB50FAB00FD3625 /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				3316C34A1AB50FAB00FD3625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
