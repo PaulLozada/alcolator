@@ -20,6 +20,19 @@
 
 @implementation ViewController
 
+-(instancetype) init {
+    
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    }
+    
+    return self;
+    
+}
+
 
 -(void)loadView{
     
@@ -104,8 +117,6 @@
     self.resultLabel.font               = [UIFont fontWithName:@"Gill Sans" size:30];
     self.resultLabel.numberOfLines      = 0;
     
-   // self.title = NSLocalizedString(@"Wine", @"Wine");
-    
 }
 
 -(void)viewWillLayoutSubviews{
@@ -145,6 +156,7 @@
 - (void)sliderValueDidChange:(UISlider *)sender {
     
     NSLog(@"Slider value changed to %f",sender.value);
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d",(int) sender.value]];
     [self.beerPercentTextField resignFirstResponder];
     
 

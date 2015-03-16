@@ -8,23 +8,29 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "BLCMainViewController.h"
 #import "BLCWhiskeyViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
 @implementation AppDelegate
-
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+    NSLog(@"New View Controller Selected: %@",viewController.title);
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    BLCMainViewController *mainMenuViewController = [[BLCMainViewController alloc]init];
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:mainMenuViewController];
-    self.window.rootViewController = navigationController;
+    ViewController *wineVC = [[ViewController alloc]init];
+    BLCWhiskeyViewController * whiskeyVC = [[BLCWhiskeyViewController alloc]init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc]init];
+    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    self.window.rootViewController = tabBarVC;
     [self.window makeKeyAndVisible];
+    tabBarVC.delegate = self;
     
     return YES;
 }

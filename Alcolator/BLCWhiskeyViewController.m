@@ -14,9 +14,22 @@
 
 @implementation BLCWhiskeyViewController
 
+
+-(instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Whiskey", nil);
+    }
+    return self;
+}
+
+
+
 -(void)sliderValueDidChange:(UISlider *)sender{
     
     self.title = [NSString stringWithFormat:@"%0.f Whiskey shot ",self.beerCountSlider.value];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d",(int) sender.value]];
 }
 
 -(void)viewDidLoad{
@@ -60,7 +73,7 @@
         whiskeyText = NSLocalizedString(@"shots", @"plural of shots");
     }
     
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ whiskey.",nil),numberOfBeers,beerText,numberOfWhiskeyGlassesForEquivalentAlcoholAmount,whiskeyText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of whiskey.",nil),numberOfBeers,beerText,numberOfWhiskeyGlassesForEquivalentAlcoholAmount,whiskeyText];
     
     self.resultLabel.text = resultText;
     
